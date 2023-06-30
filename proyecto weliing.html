@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expolit 2023</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+/*        p.piedepagina {*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    font-size: 14px;*/
+/*    font-style: italic;*/
+/*    left: 19px;*/
+/*}*/
+    </style>
+  </head>
+  <body>
+      
+    <div class="container-fluid" style="max-width: 525px;padding: 25px;text-align: center;">
+        
+                
+        <h1>Expolit 2023: LEGACY</h1>
+        <p class="lead">#YoVoyParaExpolit2023</p>
+        <form method="post" id="formulario" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="formFile" id="labelboton" class="btn btn-primary btn-lg form-label">Carga tu foto y crea el tuyo</label>
+                <input onchange="submitFile()" style="display:none;" type="file" class="form-control" name="imagen" id="formFile" accept="image/*">
+            </div>
+            <!--<button type="submit" id="btnsubmit" disabled class="btn btn-success">Enviar</button>-->
+        </form>
+                
+        <p class="piedepagina"><br> Desarrollado por <a href="https://wa.me/18098631998">Merky Chacon</a> <br/> Cortesía de Studios309</p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+        function submitFile(){
+            const btn = document.getElementById('labelboton');
+            btn.innerHTML = `<div class="spinner-border spinner-border-sm" role="status"> <span class="visually-hidden">Cargando...</span> </div> Cargando...`;
+            const formulario = document.getElementById('formulario');
+            formulario.submit();
+        }
+    </script>
+  </body>
+</html>
